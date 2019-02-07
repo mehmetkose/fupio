@@ -1,17 +1,51 @@
 {
-  "name": "Fupio  | Social Microblogging Through Tags ",
+  "name": "Fupio | Social Microblogging Through Tags ",
   "short_name": "Fupio",
   "display": "standalone",
   "background_color": "#9bd6b8",
   "theme_color": "#9bd6b8",
   "start_url": "/",
   "description": "Dead simple microblogging application",
-  "permissions": [
-    "tabs", "<all_urls>","storage","browsingData"
-  ],
   "icons": [{
     "src": "https://fupio.com/icon-192x192.png",
     "sizes": "192x192",
     "type": "image/png"
-  }]
+  }],
+  "developer": {
+    "name": "Mehmet KOSE",
+    "url": "https://mehmetkose.github.io"
+  },
+  "locales": {
+    "en": {
+      "description": "Decentralized autonomous zone for people who want to freedom.",
+      "developer": {
+        "url": "https://fupio.com"
+      }
+    },
+    "es": {
+      "description": "Zona autónoma descentralizada para las personas que quieren la libertad.",
+      "developer": {
+        "url": "https://fupio.com"
+      }
+    },
+    "it": {
+      "description": "Zona autonoma decentralizzata per le persone che vogliono la libertà.",
+      "developer": {
+        "url": "https://fupio.com"
+      }
+    },
+    "jp": {
+      "description": "自由を望む人々のための分散型自律ゾーン。",
+      "developer": {
+        "url": "https://fupio.com"
+      }
+    },
+    "ru": {
+      "description": "Децентрализованная автономная зона для людей, которые хотят свободы.",
+      "developer": {
+        "url": "https://fupio.com"
+      }
+    }
+  },
+  "default_locale": "en"
 }

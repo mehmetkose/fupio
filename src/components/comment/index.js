@@ -13,8 +13,8 @@ export default class Default extends Component {
                 {text} 
                 <span> - </span> 
                 <a href="javascript:">{ username }</a> 
-                {/* <span> - </span> 
-                <TimeAgo datetime={created} live={true} />  */}
+                <span> - </span> 
+                <TimeAgo datetime={created} live={true} /> 
             </p>
         );
     }

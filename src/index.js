@@ -166,10 +166,9 @@ export default class App extends Component {
 		});
 	}
 	loadFeedPromise = (feedRaw) => {
-		console.log("debug: load feed from gaia", feedRaw)
 		const newRank = hot(0, 0, new Date(feedRaw.created));
 		const feed = { resolved: false, rank: newRank, ...feedRaw };
-		// feed yoksa ekle.
+		
 		if (this.getFeed(feed.created, feed.identity) == false) {
 			this.state.feeds.unshift(feed);
 			this.setState({ feeds: this.state.feeds });
@@ -199,6 +198,7 @@ export default class App extends Component {
 		return { created: dump[0], identity: dump[1], commentCreated: dump[2] };
 	}
 	loadCommentPromise = (comment) => {
+		console.log(comment)
 		const { created, identity } = this.parseID(comment.feedId);
 		const feed = this.getFeed(created, identity);
 		if (feed) {
@@ -208,7 +208,7 @@ export default class App extends Component {
 			feed.comments.push(comment);
 			// re-calculate the rank if the created bigger
 			if (comment.created > feed.created) {
-				feed.created = comment.created;
+				//feed.created = comment.created;
 				feed.rank = hot(0, 0, new Date(feed.created));
 			}
 			this.updateFeed(created, identity, feed);
@@ -285,6 +285,7 @@ export default class App extends Component {
 			this.setState({ user: userData });
 		}
 		return (
+			<div>
 			<Router onChange={this.handleRoute}>
 				<Main path="/" {...this.state} />
 				<Wall path="/:feed_slug" {...this.state} />
@@ -292,6 +293,12 @@ export default class App extends Component {
 				<Settings path="/user/settings" {...this.state} feeds={null} />
 				<Page path="/page/:page_slug" {...this.state} feeds={null} />
 			</Router>
+			<p style="position: fixed; left:2px; bottom:2px; font-size: 12px">
+				<a target="_blank" href="https://github.com/fupio/fupio/releases/tag/v0.2.0">
+					v0.2.0
+				</a>
+			</p>
+			</div>
 		);
 	}
 }
