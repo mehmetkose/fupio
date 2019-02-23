@@ -1,8 +1,9 @@
 :root {
-	--mainThemeBGColor: #9bd6b8;
+	// --mainThemeBGColor: #9bd6b8;
 	--mainThemeColorDarker: #7aa991;
 	--mainThemeColorShadow: #7c9285;
 	--mainThemeTextColor: #505664;
+	
 }
 
 * {
@@ -20,6 +21,13 @@ html {
 	font-weight: 400;
 }
 
+body{
+	background: #A1FFCE;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FAFFD1, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
 #overlay {
     position: fixed;
     top: 0;
@@ -34,9 +42,9 @@ h1.logo{
 	font-size: 3em;
 	font-family: 'Pacifico', Helvetica, cursive;
 	z-index: 100;
+	font-weight: bold;
 	font-weight: 600;
 }
-
 a,a:visited,a:active,a:hover{
 	color: #485f68;
 	text-decoration:none; 

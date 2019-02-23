@@ -1,0 +1,371 @@
+
+.marvel-device{
+	display: inline-block;
+	position: relative;
+	box-sizing: content-box !important;
+
+	.screen {
+		width: 100%;
+		position: relative;
+		height: 100%;
+		z-index: 3;
+		background: white;
+		overflow: hidden;
+		display: block;
+		border-radius: 1px;
+		box-shadow: 0 0 0 3px #111;
+	}
+
+	.top-bar, .bottom-bar {
+		height: 3px;
+		background: black;
+		width: 100%;
+		display: block;
+	}
+
+	.middle-bar {
+		width: 3px;
+		height: 4px;
+		top: 0px;
+		left: 90px;
+		background: black;
+		position: absolute;
+	}
+
+	
+
+	&.iphone5s, &.iphone5c{
+		padding: 105px 22px;
+		background: #2c2b2c;
+		width: 320px;
+		height: 568px;
+		border-radius: 50px;
+
+		&:before{
+			width: calc(100% - 8px);
+			height: calc(100% - 8px);
+			position: absolute;
+			top: 4px;
+			content: '';
+			left: 4px;
+			border-radius: 46px;
+			background: #1e1e1e;
+			z-index: 1;
+		}
+
+		.sleep{
+			position: absolute;
+			top: -4px;
+			right: 60px;
+			width: 60px;
+			height: 4px;
+			border-radius: 2px 2px 0px 0px;
+			background: #282727;
+		}
+
+		.volume{
+			position: absolute;
+			left: -4px;
+			top: 180px;
+			z-index: 0;
+			height: 27px;
+			width: 4px;
+			border-radius: 2px 0px 0px 2px;
+			background: #282727;
+
+			&:before {
+				position: absolute;
+				left: 0px;
+				top: -75px;
+				height: 35px;
+				width: 4px;
+				border-radius: 2px 0px 0px 2px;
+				background: inherit;
+				content: '';
+				display: block;
+			}
+
+			&:after {
+				position: absolute;
+				left: 0px;
+				bottom: -64px;
+				height: 27px;
+				width: 4px;
+				border-radius: 2px 0px 0px 2px;
+				background: inherit;
+				content: '';
+				display: block;
+			}
+		}
+
+		.camera {
+			background: #3c3d3d;
+			width: 10px;
+			height: 10px;
+			position: absolute;
+			top: 32px;
+			left: 50%;
+			margin-left: -5px;
+			border-radius: 5px;
+			z-index: 3;
+		}
+
+		.sensor {
+			background: #3c3d3d;
+			width: 10px;
+			height: 10px;
+			position: absolute;
+			top: 60px;
+			left: 160px;
+			z-index: 3;
+			margin-left: -32px;
+			border-radius: 5px;
+		}
+
+		.speaker {
+			background: #292728;
+			width: 64px;
+			height: 10px;
+			position: absolute;
+			top: 60px;
+			left: 50%;
+			margin-left: -32px;
+			border-radius: 5px;
+			z-index: 3;
+		}
+
+		&.landscape{
+			padding: 22px 105px;
+			height: 320px;
+			width: 568px;
+
+			.sleep{
+				right: -4px;
+				top: calc(100% - 120px);
+				height: 60px;
+				width: 4px;
+				border-radius: 0px 2px 2px 0px;
+			}
+
+			.volume {
+				width: 27px;
+				height: 4px;
+				top: -4px;
+				left: calc(100% - 180px);
+				border-radius: 2px 2px 0px 0px;
+
+				&:before {
+					width: 35px;
+					height: 4px;
+					top: 0px;
+					right: -75px;
+					left: auto;
+					border-radius: 2px 2px 0px 0px;
+				}
+
+				&:after{
+					bottom: 0px;
+					left: -64px;
+					z-index: 999;
+					height: 4px;
+					width: 27px;
+					border-radius: 2px 2px 0px 0px;
+				}
+			}
+
+			.sensor {
+				top: 160px;
+				left: calc(100% - 60px);
+				margin-left: 0px;
+				margin-top: -32px;
+			}
+
+			.speaker {
+				height: 64px;
+				width: 10px;
+				left: calc(100% - 60px);
+				top: 50%;
+				margin-left: 0px;
+				margin-top: -32px;
+			}
+
+			.camera {
+				left: calc(100% - 32px);
+				top: 50%;
+				margin-left: 0px;
+				margin-top: -5px;
+			}
+		}
+	}
+
+	&.iphone5s{
+		.home {
+			border-radius: 36px;
+			width: 68px;
+			box-shadow: inset 0 0 0 4px #2c2b2c;
+			height: 68px;
+			position: absolute;
+			left: 50%;
+			margin-left: -34px;
+			bottom: 19px;
+			z-index: 3;
+		}
+
+		.top-bar{
+			top: 70px;
+			position: absolute;
+			left: 0;
+		}
+
+		.bottom-bar {
+			bottom: 70px;
+			position: absolute;
+			left: 0;
+		}
+
+		&.landscape{
+			.home {
+				left: 19px;
+				bottom: 50%;
+				margin-bottom: -34px;
+				margin-left: 0px;
+			}
+
+			.top-bar {
+				left: 70px;
+				top: 0px;
+				width: 3px;
+				height: 100%;
+			}
+
+			.bottom-bar {
+				right: 70px;
+				left: auto;
+				bottom: 0px;
+				width: 3px;
+				height: 100%;
+			}
+		}
+
+		&.silver{
+			background: #bcbcbc;
+
+			&:before{
+				background: #fcfcfc;
+			}
+
+			.volume, .sleep{
+				background: #d6d6d6;
+			}
+
+			.top-bar, .bottom-bar{
+				background: #eaebec;
+			}
+
+			.home{
+				box-shadow: inset 0 0 0 4px #bcbcbc;
+			}
+		}
+
+		&.gold{
+			background: #f9e7d3;
+
+			&:before{
+				background: #fcfcfc;
+			}
+
+			.volume, .sleep{
+				background: #f9e7d3;
+			}
+
+			.top-bar, .bottom-bar{
+				background: white;
+			}
+
+			.home{
+				box-shadow: inset 0 0 0 4px #f9e7d3;
+			}
+		}
+	}
+
+	&.iphone5c{
+		background: white;
+		box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+
+		.top-bar, .bottom-bar{
+			display: none;
+		}
+
+		.home{
+			background: #242324;
+			border-radius: 36px;
+			width: 68px;
+			height: 68px;
+			z-index: 3;
+			position: absolute;
+			left: 50%;
+			margin-left: -34px;
+			bottom: 19px;
+
+			&:after{
+				width: 20px;
+				height: 20px;
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				border-radius: 4px;
+				position: absolute;
+				display: block;
+				content: '';
+				top: 50%;
+				left: 50%;
+				margin-top: -11px;
+				margin-left: -11px;
+			}
+		}
+
+		&.landscape{
+			.home {
+				left: 19px;
+				bottom: 50%;
+				margin-bottom: -34px;
+				margin-left: 0px;
+			}
+		}
+
+		.volume, .sleep{
+			background: #dddddd;
+		}
+
+		&.red{
+			background: #f96b6c;
+
+			.volume, .sleep{
+				background: #ed5758;
+			}
+		}
+
+		&.yellow{
+			background: #f2dc60;
+
+			.volume, .sleep{
+				background: #e5ce4c;
+			}
+		}
+
+		&.green{
+			background: #97e563;
+
+			.volume, .sleep{
+				background: #85d94d;
+			}
+		}
+
+		&.blue{
+			background: #33a2db;
+
+			.volume, .sleep{
+				background: #2694cd;
+			}
+		}
+	}
+
+}

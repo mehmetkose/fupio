@@ -75,6 +75,14 @@ export default class Footer extends Component {
 					}
 					
 				</div>
+				<hr />
+				<div style="text-align:center">
+				<a href="https://www.producthunt.com/posts/fupio?utm_source=badge-featured" target="_blank">
+							<img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=131951&amp;theme=dark" 
+								alt="Fupio - Dead simple decentralized microblogging application | Product Hunt Embed" 
+								style="width: 200px; height: 43px;" width="200px" height="43px" />
+						</a>
+				</div>
 			</footer>
 		);
 	}

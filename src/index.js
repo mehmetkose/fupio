@@ -93,7 +93,7 @@ export default class App extends Component {
 		}
 	}
 	unique = x => [...new Set(x)];
-	initConnection = (orion='wss://orion8.herokuapp.com', v='1') => {
+	initConnection = (orion='wss://orion88.herokuapp.com', v='1') => {
 		const url = `${orion}?v=${v}&token=${this.state.user.authResponseToken}`;
 		const wsConnection = new Sockette(url, {
 		  timeout: 7e3,
@@ -131,7 +131,6 @@ export default class App extends Component {
 				break;
 			}
 		}
-		console.log("get -> ", message)
 	};
 	loadProfilePromise = (username) => {
 		// get the user photo
@@ -286,18 +285,18 @@ export default class App extends Component {
 		}
 		return (
 			<div>
-			<Router onChange={this.handleRoute}>
-				<Main path="/" {...this.state} />
-				<Wall path="/:feed_slug" {...this.state} />
-				<Discover path="/user/discover" {...this.state} />
-				<Settings path="/user/settings" {...this.state} feeds={null} />
-				<Page path="/page/:page_slug" {...this.state} feeds={null} />
-			</Router>
-			<p style="position: fixed; left:2px; bottom:2px; font-size: 12px">
-				<a target="_blank" href="https://github.com/fupio/fupio/releases/tag/v0.2.0">
-					v0.2.0
-				</a>
-			</p>
+				<Router onChange={this.handleRoute}>
+					<Main path="/" {...this.state} />
+					<Wall path="/:feed_slug" {...this.state} />
+					<Discover path="/user/discover" {...this.state} />
+					<Settings path="/user/settings" {...this.state} feeds={null} />
+					<Page path="/page/:page_slug" {...this.state} feeds={null} />
+				</Router>
+				<p style="position: fixed; left:2px; bottom:2px; font-size: 12px">
+					<a target="_blank" href="https://github.com/fupio/fupio/releases/tag/v0.2.0">
+						v0.3.1
+					</a>
+				</p>
 			</div>
 		);
 	}

@@ -11,17 +11,25 @@
 	}
 
     .watermelon{
-        padding-top: 2em;
+        padding-top: 6em;
     }
     h1{
         margin:20% 0 .8% 0;
         font-size: 3em;
+    }
+    .small{
+        padding-top: 1em;
+        font-size: 1em;
     }
     section{
         margin: 8% auto;
         // &:nth-child(2n+1){ border: 1px solid #333} 
     }
     h2{
+        margin: 0.47em auto;
+        font-size: 1.2em;
+    }
+    h3{
         margin: 0.67em auto;
     }
     img{
