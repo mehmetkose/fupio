@@ -39,6 +39,7 @@ export default class Footer extends Component {
 							<li><Link href="/page/rules">Rules</Link></li>
 							<li><Link href="/page/about">About</Link></li>
 							<li><Link href="/page/team">Team</Link></li>
+							<li><Link href="/page/support-us">Support Us</Link></li>
 							
 						</ul>
 					</div>
