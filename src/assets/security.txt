@@ -1,0 +1,4 @@
+Contact: fupio.com@gmail.com
+Preferred-Languages: en, tr
+Canonical: https://fupio.com/.well_known/security.txt
+Policy: https://fupio.com/page/privacy
